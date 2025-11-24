@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mediconex — Community IoT Health Platform</title>
+  <meta name="description" content="Mediconex — low-cost IoT health monitoring platform connecting rural communities, health workers and doctors in real-time." />
+  <meta property="og:title" content="Mediconex — Community IoT Health Platform" />
+  <meta property="og:description" content="Low-cost IoT devices, real-time vital monitoring, telemedicine and doctor tools for remote communities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0b6b6b">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Mediconex</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#devices">Devices</a>
+        <a href="#usecases">Use cases</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Mediconex — IoT health monitoring for remote communities</h1>
+          <p class="lead">Real-time vital tracking (BPM, SpO₂, Temp, BP), telemedicine workflows, and doctor dashboards — built for low-resource settings.</p>
+          <p class="hero-actions">
+            <a class="btn primary" href="#features">See features</a>
+            <a class="btn ghost" href="https://github.com/yourusername/mediconex" target="_blank" rel="noopener">View on GitHub</a>
+          </p>
+          <ul class="quick-stats">
+            <li><strong>ESP32</strong><span>Hardware-ready</span></li>
+            <li><strong>AWS IoT</strong><span>Cloud-ready</span></li>
+            <li><strong>Doctor View</strong><span>Prescriptions & appointments</span></li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <!-- placeholder illustration -->
+          <img src="assets/hero-mockup.png" alt="Mediconex dashboard mockup" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Core features</h2>
+        <p class="section-sub">A compact, practical stack for field health monitoring.</p>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Real-time Telemetry</h3>
+            <p>Publish sensor readings (BPM, SpO₂, temp, BP) from devices to cloud and view live in the app.</p>
+          </article>
+          <article class="card">
+            <h3>Doctor Dashboard</h3>
+            <p>Doctors can view patient timelines, write prescriptions, and manage appointments.</p>
+          </article>
+          <article class="card">
+            <h3>Offline-first</h3>
+            <p>Local buffering and sync to handle intermittent connectivity in rural areas.</p>
+          </article>
+          <article class="card">
+            <h3>Privacy & Security</h3>
+            <p>Certificate-based device provisioning, secure cloud integration, and per-device policies.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devices -->
+    <section id="devices" class="section alt">
+      <div class="container">
+        <h2>Hardware & Integration</h2>
+        <div class="device-grid">
+          <div class="device">
+            <img src="assets/esp32.png" alt="ESP32 device">
+            <h4>ESP32</h4>
+            <p>Primary microcontroller used on field devices.</p>
+          </div>
+          <div class="device">
+            <img src="assets/max30102.png" alt="MAX30102 sensor">
+            <h4>Pulse Oximeter (MAX30102)</h4>
+            <p>SpO₂ and heart-rate sensor for non-invasive monitoring.</p>
+          </div>
+          <div class="device">
+            <img src="assets/mcp9808.png" alt="MCP9808 sensor">
+            <h4>Temperature (MCP9808)</h4>
+            <p>Accurate digital temperature sensor.</p>
+          </div>
+          <div class="device">
+            <img src="assets/ad8232.png" alt="ECG / AD8232">
+            <h4>ECG Sensor</h4>
+            <p>Optional ECG front-end for basic waveform capture (prototype stage).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use cases -->
+    <section id="usecases" class="section">
+      <div class="container">
+        <h2>Who benefits</h2>
+        <div class="usecases">
+          <div>
+            <h4>Primary Health Workers</h4>
+            <p>Quick vital scans and patient uploads during village visits.</p>
+          </div>
+          <div>
+            <h4>Doctors</h4>
+            <p>View patient vitals remotely, manage appointments, send prescriptions.</p>
+          </div>
+          <div>
+            <h4>Community</h4>
+            <p>Lower travel burden, faster triage, better continuous care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section cta-section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Get involved</h2>
+          <p>Want to test devices, join development, or collaborate? Drop a message.</p>
+          <form id="contact-form" class="contact-form" novalidate>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Send message</button>
+            </div>
+            <div id="contact-result" class="form-result" aria-live="polite"></div>
+          </form>
+        </div>
+        <aside>
+          <h3>Developer resources</h3>
+          <ul class="resource-list">
+            <li><strong>Repo:</strong> <a href="https://github.com/yourusername/mediconex" target="_blank" rel="noopener">github.com/yourusername/mediconex</a></li>
+            <li><strong>Docs:</strong> Architecture, device provisioning, and API specs in `/docs`</li>
+            <li><strong>License:</strong> MIT (suggested)</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; <span id="year"></span> Mediconex</div>
+      <div class="social">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
